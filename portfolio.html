@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilo para a seção do Portfólio - exibe os cards */
+        .portfolio-cards {
+            display: grid; /* Usando grid para disposição dos cards */
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Define a quantidade de colunas de forma responsiva */
+            gap: 20px; /* Espaço entre os cards */
+            padding: 20px 0; /* Espaçamento interno superior e inferior */
+        }
+
+        /* Estilo para cada card individual */
+        .card {
+            background-color: #000000; /* Fundo preto para os cards */
+            padding: 20px; /* Preenchimento interno */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+            border-radius: 12px; /* Bordas arredondadas */
+            transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Suaviza os efeitos de transição */
+        }
+
+        /* Efeito hover nos cards */
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais intensa ao passar o mouse */
+            transform: translateY(-8px); /* Movimenta o card para cima, criando um efeito de "levitação" */
+            background-color: #1a1a1a; /* Cor de fundo mais escura quando o mouse passa sobre o card */
+        }
+
+        /* Estilo do título dentro dos cards */
+        .card h3 {
+            font-size: 1.8rem; /* Tamanho do título maior */
+            color: #8962E6; /* Cor roxa vibrante */
+            margin-bottom: 10px; /* Espaço abaixo do título */
+            font-weight: bold; /* Deixa o título em negrito */
+            text-transform: uppercase; /* Coloca o título em maiúsculas */
+        }
+
+        /* Estilo do texto dentro dos cards */
+        .card p {
+            font-size: 1.1rem; /* Tamanho do texto ligeiramente maior */
+            color: #ffffff; /* Cor do texto branca */
+            margin-bottom: 10px; /* Espaço abaixo do parágrafo */
+            line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
+        }
+
+        /* Estilo do texto destacado dentro dos cards */
+        .card p strong {
+            color: #8962E6; /* Cor roxa para destacar termos como cargos e atribuições */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <!-- Lista de links de navegação -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
+            <li><a href="formacao.html">Formação & Idiomas</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <section class="portfolio">
+        <h2>Portfólio</h2>
+        <p>Tenho experiência em diversas áreas, como vendedor de roupas, conferente logístico, técnico de laboratório e
+            engenheiro de ensaios. Confira alguns dos destaques da minha carreira:</p>
+
+        <!-- Cards de Experiência Profissional -->
+        <div class="portfolio-cards">
+            <!-- Cada card representa uma experiência profissional -->
+            <div class="card">
+                <h3>Empório Alex</h3>
+                <p><strong>Cargo:</strong> Vendedor de Roupas</p>
+                <p><strong>Atribuições:</strong> Atendimento ao cliente, vendas e organização de estoque.</p>
+            </div>
+
+            <div class="card">
+                <h3>Shopee</h3>
+                <p><strong>Cargo:</strong> Conferente Logístico</p>
+                <p><strong>Atribuições:</strong> Garantia de precisão nos processos logísticos e conferência de mercadorias.</p>
+            </div>
+
+            <div class="card">
+                <h3>CTDI</h3>
+                <p><strong>Cargo:</strong> Técnico de Laboratório</p>
+                <p><strong>Atribuições:</strong> Manutenção e testes de equipamentos eletrônicos.</p>
+            </div>
+
+            <div class="card">
+                <h3>CPEx Laboratório</h3>
+                <p><strong>Cargo:</strong> Engenheiro de Ensaios</p>
+                <p><strong>Atribuições:</strong> Realização de testes e análises em conformidade com normas e regulamentos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Jhon. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

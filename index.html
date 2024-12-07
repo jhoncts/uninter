@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Estilos internos para o cabeçalho e animações -->
+    <style>
+        /* Estiliza o título do cabeçalho */
+        header h1 {
+            font-size: 3rem; /* Tamanho de fonte grande */
+            margin-bottom: 20px; /* Espaço inferior */
+            font-weight: bold; /* Deixa o texto em negrito */
+            text-transform: uppercase; /* Transforma as letras em maiúsculas */
+        }
+
+        /* Estiliza o parágrafo do cabeçalho */
+        header p {
+            font-size: 1.5rem; /* Tamanho de fonte médio */
+            margin-bottom: 30px; /* Espaço inferior */
+        }
+
+        /* Estilo do botão de chamada para ação */
+        header .cta-button {
+            font-size: 1.2rem; /* Tamanho de fonte médio */
+            padding: 12px 30px; /* Preenchimento interno do botão */
+            background-color: #8962E6;  /* Cor de fundo roxa */
+            color: white; /* Cor do texto */
+            text-decoration: none; /* Remove a linha do link */
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: background-color 0.3s ease; /* Transição suave para o hover */
+        }
+
+        /* Efeito de hover (passar o mouse) no botão */
+        header .cta-button:hover {
+            background-color: #7a4bc2;  /* Cor de roxo mais escuro no hover */
+        }
+
+        /* Animação de Fade-In para o conteúdo */
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Começa invisível */
+                transform: translateY(30px); /* Desloca o conteúdo para baixo */
+            }
+            to {
+                opacity: 1; /* Fica visível */
+                transform: translateY(0); /* Retorna à posição original */
+            }
+        }
+
+        /* Aplica a animação no cabeçalho */
+        header {
+            animation: fadeIn 1s ease-out; /* Animação de fade-in */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
+            <li><a href="formacao.html">Formação & Idiomas</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal (Header) -->
+    <header>
+        <div class="header-content">
+            <h1>Bem-vindo ao Meu Portfólio</h1>
+            <p>Conheça mais sobre mim, minhas experiências e projetos.</p>
+            <!-- Link para a página de portfólio -->
+            <a href="portfolio.html" class="cta-button">Veja meu Portfólio</a>
+        </div>
+    </header>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Jhon. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

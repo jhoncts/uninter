@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+        /* Estilo da seção de contato */
+        section#contato {
+            padding: 30px; /* Preenchimento interno da seção */
+            margin: 40px auto; /* Margem superior e inferior com centralização */
+            max-width: 700px; /* Largura máxima da seção */
+            background-color: #0e0d0d;  /* Fundo mais escuro para destacar a seção */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para dar destaque */
+            border-radius: 10px; /* Bordas arredondadas */
+        }
+
+        /* Estilo para os títulos da seção de contato */
+        section#contato h2 {
+            font-size: 2.2rem; /* Tamanho do título maior */
+            color: #8962E6;  /* Cor roxa para manter o estilo do portfólio */
+            margin-bottom: 20px; /* Espaçamento abaixo do título */
+            text-align: center; /* Centraliza o título */
+        }
+
+        section#contato p {
+            font-size: 1.2rem; /* Tamanho do texto do parágrafo */
+            color: #ddd;  /* Cor clara para o texto */
+            text-align: center; /* Centraliza o parágrafo */
+        }
+
+        /* Estilo da lista de links de contato */
+        section#contato ul {
+            list-style-type: none; /* Remove os marcadores da lista */
+            padding: 0; /* Remove o preenchimento da lista */
+            margin: 20px 0; /* Espaçamento vertical entre os itens */
+        }
+
+        section#contato ul li {
+            margin-bottom: 15px; /* Espaçamento abaixo de cada item da lista */
+            font-size: 1.1rem; /* Tamanho do texto para os itens */
+        }
+
+        section#contato ul li a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: #8962E6;  /* Cor roxa para os links */
+            transition: color 0.3s ease; /* Efeito suave para a mudança de cor */
+        }
+
+        section#contato ul li a:hover {
+            color: #ffcc00;  /* Cor de destaque quando o mouse passa sobre o link */
+        }
+
+        /* Estilo do título do formulário */
+        section#contato h3 {
+            font-size: 1.8rem; /* Tamanho do título */
+            margin-top: 20px; /* Margem superior */
+            color: #fff; /* Cor branca para o título */
+            text-align: center; /* Centraliza o título */
+        }
+
+        /* Estilo do formulário */
+        form {
+            display: flex; /* Usando flexbox para disposição vertical */
+            flex-direction: column; /* Disposição em coluna */
+            gap: 15px; /* Espaçamento entre os campos do formulário */
+            margin-top: 20px; /* Margem superior */
+            margin-bottom: 40px; /* Margem inferior */
+        }
+
+        /* Estilo dos labels do formulário */
+        form label {
+            font-size: 1.1rem; /* Tamanho do texto dos labels */
+            color: #fff; /* Cor branca para os labels */
+        }
+
+        /* Estilo dos campos de entrada e textarea */
+        form input, form textarea {
+            padding: 12px; /* Preenchimento interno dos campos */
+            font-size: 1rem; /* Tamanho do texto dentro dos campos */
+            border: 1px solid #444;  /* Borda suave e escura */
+            border-radius: 8px; /* Bordas arredondadas */
+            outline: none; /* Remove a borda de foco padrão */
+            width: 100%; /* Faz os campos ocuparem 100% da largura */
+            background-color: #333;  /* Fundo escuro para os campos */
+            color: #fff;  /* Cor do texto dentro dos campos */
+            transition: border-color 0.3s ease; /* Efeito suave de transição nas bordas */
+        }
+
+        /* Efeito de foco nos campos */
+        form input:focus, form textarea:focus {
+            border-color: #8962E6;  /* Borda roxa quando o campo está em foco */
+        }
+
+        /* Estilo específico para o textarea */
+        form textarea {
+            resize: vertical; /* Permite redimensionar o campo de texto verticalmente */
+        }
+
+        /* Estilo do botão de envio */
+        form button {
+            background-color: #8962E6;  /* Cor roxa para o botão */
+            color: white; /* Cor do texto do botão */
+            padding: 14px; /* Preenchimento interno do botão */
+            border: none; /* Remove a borda do botão */
+            border-radius: 8px; /* Bordas arredondadas */
+            font-size: 1.1rem; /* Tamanho do texto no botão */
+            cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
+            transition: background-color 0.3s ease; /* Efeito suave no fundo do botão ao passar o mouse */
+        }
+
+        /* Efeito hover no botão */
+        form button:hover {
+            background-color: #7a4bc2;  /* Tom de roxo mais escuro no hover */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <!-- Lista de links de navegação -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
+            <li><a href="formacao.html">Formação & Idiomas</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Você pode entrar em contato comigo através dos seguintes meios:</p>
+        <!-- Lista de formas de contato -->
+        <ul>
+            <li><strong>Celular/WhatsApp:</strong> <a href="tel:+551998278188">(19) 98278-188</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:jhonctsoff@gmail.com">jhonctsoff@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jhon-cleiton-8563422aa/" target="_blank">Jhon Cleiton</a></li>
+        </ul>
+
+        <h3>Envie uma mensagem</h3>
+        <!-- Formulário de contato -->
+        <form onsubmit="return validarFormulario()">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br><br>
+            
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea><br><br>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Jhon. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

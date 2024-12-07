@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Meu Portfólio</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
+            <li><a href="formacao.html">Formação & Idiomas</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal - Seção Sobre Mim -->
+    <section>
+        <h2>Sobre Mim</h2>
+        <div class="sobre-container">
+            <!-- Texto de apresentação -->
+            <div class="sobre-texto">
+                <h2>Olá! Meu nome é Jhon</h2>
+                <p>Sou estudante de Análise e Desenvolvimento de Sistemas (ADS). Tenho um grande interesse no mercado da
+                    tecnologia em geral, explorando constantemente novas áreas e tecnologias. Nos meus tempos livres, gosto
+                    de ouvir música e sair com meus amigos, aproveitando para relaxar e me divertir.</p>
+            </div>
+
+            <!-- Seção de Imagem com evento onclick -->
+            <div class="sobre-imagem">
+                <!-- Imagem com evento de clique para troca de imagem -->
+                <img id="minhaFoto" src="images/sobre-mim1.jpg" alt="Foto de Jhon" onclick="trocarImagem()" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Jhon. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para troca de imagem -->
+    <script>
+        // Função que troca a imagem ao clicar nela
+        function trocarImagem() {
+            var imagem = document.getElementById('minhaFoto');
+            
+            // Verifica qual imagem está sendo exibida e troca para a outra
+            if(imagem.src.includes('sobre-mim1.jpg')) {
+                imagem.src = 'images/sobre-mim2.jpg'; // Caminho da nova imagem
+            } else {
+                imagem.src = 'images/sobre-mim1.jpg'; // Caminho da imagem original
+            }
+        }
+    </script>
+</body>
+
+</html>

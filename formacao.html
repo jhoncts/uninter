@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação & Idiomas - Meu Portfólio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
+            <li><a href="formacao.html">Formação & Idiomas</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <section>
+        <h2>Formação & Idiomas</h2>
+
+        <!-- Formação -->
+        <div class="formacao">
+            <h3>Formação Acadêmica</h3>
+            <ul>
+                <li><strong>Técnico em Eletroeletrônica</strong> - Instituto Federal de Campinas (SP) - 2022</li>
+                <li><strong>Graduando em Análise e Desenvolvimento de Sistemas (ADS)</strong> - Uninter (atualmente
+                    cursando)</li>
+            </ul>
+        </div>
+
+        <!-- Idiomas -->
+        <div class="idiomas">
+            <h3>Idiomas</h3>
+            <ul>
+                <li><strong>Português</strong> - Nativo</li>
+                <li><strong>Inglês</strong> - Básico</li>
+            </ul>
+
+            <!-- Barra de Progresso animada -->
+            <div class="idioma-item">
+                <progress id="idioma-ingles" value="0" max="100"></progress> <!-- Inicializa com 0% -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Jhon. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Função para animar a barra de progresso
+        function animarProgresso() {
+            const progresso = document.getElementById("idioma-ingles");
+            let valor = 0;
+
+            // Animação da barra de progresso
+            const intervalo = setInterval(() => {
+                if (valor < 30) { // Definindo o valor final da animação (30%)
+                    valor++;
+                    progresso.value = valor;
+                } else {
+                    clearInterval(intervalo); // Para a animação quando atingir 30%
+                }
+            }, 30); // Intervalo de 30ms para criar o efeito de animação
+        }
+
+        // Chama a função de animação ao carregar a página
+        window.onload = animarProgresso;
+    </script>
+</body>
+
+</html>

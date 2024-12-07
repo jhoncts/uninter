@@ -1,0 +1,372 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;  /* Cor de fundo preta */
+    color: #e0e0e0;  /* Cor de texto clara */
+}
+
+/* Estilo do menu de navegação */
+nav {
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;  /* Usando flex para dispor os itens em linha */
+    gap: 20px;  /* Espaçamento entre os itens */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;  /* Cor do texto */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;  /* Suaviza a transição de cor */
+}
+
+nav ul li a:hover {
+    color: #8962E6;  /* Cor de destaque ao passar o mouse */
+}
+
+/* Adicionar linha de destaque abaixo do link ao passar o mouse */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;  /* Linha aparece logo abaixo do texto */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #8962E6;  /* Cor da linha */
+    transform: scaleX(0);  /* Começa invisível */
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);  /* Linha aparece com efeito ao passar o mouse */
+}
+
+
+header {
+    background-color: #000000;  /* Fundo preto */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;  /* Ajuste do padding para um espaço mais equilibrado */
+    min-height: 50vh;  /* Define uma altura mínima de 50% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Alinha o conteúdo ao centro */
+    align-items: center;  /* Alinha o conteúdo ao centro */
+}
+
+
+.header-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #e0e0e0;  /* Cor do texto */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #bbb;  /* Texto mais suave */
+    margin-bottom: 20px;
+}
+
+/* Botão de ação (CTA) */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #8962E6;  /* Roxo */
+    color: #fff;  /* Cor clara */
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #7a52c4;  /* Cor roxa mais escura */
+}
+
+/* Estilos do conteúdo das seções */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #000000;  /* Fundo preto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #8962E6;  /* Cor roxa para os títulos */
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Estilo do formulário de contato */
+#contato ul {
+    list-style-type: none;
+}
+
+#contato li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#contato a {
+    color: #8962E6;  /* Cor roxa */
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #06040a;  /* Tom de roxo escuro */
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10; /* Garantir que o footer fique acima de outros elementos */
+    box-shadow: 0 4px 20px rgba(154, 89, 182, 0.4); /* Sombra suave roxa em baixo */
+    overflow: hidden; /* Evitar que a animação ultrapasse os limites do footer */
+}
+
+/* Animação de luz vindo de baixo para o footer */
+@keyframes luzSubindo {
+    0% {
+        box-shadow: 0 -10px 30px rgba(154, 89, 182, 0.2); /* Começo da animação com sombra suave */
+    }
+    50% {
+        box-shadow: 0 -10px 40px rgba(154, 89, 182, 0.5); /* Intensifica a luz */
+    }
+    100% {
+        box-shadow: 0 -10px 30px rgba(154, 89, 182, 0.2); /* Retorna à sombra suave */
+    }
+}
+
+/* Aplica a animação no rodapé */
+footer {
+    animation: luzSubindo 5s infinite ease-in-out; /* Animação suave de luz subindo */
+}
+
+
+/* Aplica a animação no rodapé */
+footer {
+    animation: luzSuave 6s infinite ease-in-out; /* Animação suave da luz subindo */
+}
+
+/* Adicionando o efeito de luz suave abaixo do rodapé */
+footer::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;  /* Coloca a luz abaixo do rodapé */
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(6, 4, 10, 0)); /* Gradiente que simula a luz vindo de baixo */
+    box-shadow: 0 -10px 30px rgba(154, 89, 182, 0.2); /* Simulando a luz */
+    animation: luzSuave 6s infinite ease-in-out;  /* Aplicando a animação no efeito de luz */
+}
+
+
+
+/* Estilo da seção "Sobre Mim" */
+.sobre {
+    padding: 40px 20px;
+    background-color: #000000;  /* Fundo preto */
+    text-align: center;
+}
+
+.sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-texto {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.sobre-texto h2 {
+    font-size: 2.5rem;
+    color: #8962E6;  /* Cor roxa */
+    margin-bottom: 15px;
+}
+
+.sobre-texto p {
+    font-size: 1.2rem;
+    color: #bbb;  /* Texto suave */
+    line-height: 1.6;
+}
+
+.sobre-imagem {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para a seção de Formação & Idiomas */
+.formacao {
+    margin-top: 40px;
+}
+
+.formacao h3 {
+    font-size: 1.8rem;
+    color: #8962E6;  /* Cor roxa */
+    margin-bottom: 10px;
+}
+
+.formacao ul {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.formacao ul li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+/* Barra de progresso do idioma */
+.idioma-progresso {
+    margin-top: 3px;
+}
+
+.idioma-item {
+    margin-bottom: 15px;
+}
+
+/* Estilos da barra de progresso */
+progress {
+    width: 20%; /* Aumenta o comprimento para 100% */
+    height: 10px;
+}
+
+/* Personalização do preenchimento da barra de progresso */
+progress::-webkit-progress-bar {
+    background-color: #c5c5c5; /* Cor do fundo da barra */
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #8962E6, #7a52c4); /* Gradiente roxo */
+}
+
+progress::-moz-progress-bar {
+    background: linear-gradient(90deg, #8962E6, #7a52c4); /* Gradiente roxo para Firefox */
+}
+
+/* Estilo para a animação */
+#idioma-ingles {
+    background-color: #4CAF50; /* Caso queira que o progresso seja verde, mas não será aplicado diretamente */
+}
+
+/* Estilo da seção de Experiências Profissionais */
+.experiencias {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.experiencia-card {
+    background-color: #000000;  /* Fundo preto */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.experiencia-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.experiencia-card h4 {
+    font-size: 1.6rem;
+    color: #8962E6;  /* Cor roxa */
+    margin-bottom: 10px;
+}
+
+.experiencia-card p {
+    font-size: 1.1rem;
+    color: #bbb;  /* Texto suave */
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-imagem {
+        margin-top: 20px;
+    }
+
+    .formacao ul li {
+        font-size: 1rem;
+    }
+
+    .idioma-item {
+        font-size: 1rem;
+    }
+
+    .experiencias {
+        grid-template-columns: 1fr;
+    }
+}
